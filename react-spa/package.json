@@ -1,0 +1,54 @@
+{
+  "name": "react-spa",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=14.9.0"
+  },
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build && serve -s build -l 4000",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "date-fns": "^2.16.1",
+    "excerpts": "^0.0.3",
+    "marked": "^1.2.5",
+    "react": "0.0.0-experimental-3310209d0",
+    "react-dom": "0.0.0-experimental-3310209d0",
+    "react-query": "^3.16.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "sanitize-html": "^2.2.0",
+    "serve": "^11.3.2",
+    "web-vitals": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/marked": "^2.0.3",
+    "@types/node": "^15.6.1",
+    "@types/react": "^17.0.7",
+    "@types/react-dom": "^17.0.5",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/sanitize-html": "^2.3.1",
+    "typescript": "^4.2.4"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

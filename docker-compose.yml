@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    environment:
+      POSTGRES_USER: notesadmin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: notesapi
+    ports:
+      - '5432:5432'
+    volumes:
+      - ./init_db.sh:/docker-entrypoint-initdb.d/init_db.sh
+      - db:/var/lib/postgresql/data
+
+  server:
+    build:
+      context: .
+      dockerfile: ./server.Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - '5000:5000'
+    environment:
+      DB_HOST: postgres
+    volumes:
+      - ./server:/opt/server
+
+volumes:
+  db:

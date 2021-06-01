@@ -1,0 +1,16 @@
+{
+	"name": "@ssr-demo/db",
+	"version": "0.1.0",
+	"private": true,
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"seed": "node scripts/seed.js"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"date-fns": "^2.16.1",
+		"express": "^4.17.1",
+		"pg": "^8.6.0"
+	}
+}
